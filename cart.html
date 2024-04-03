@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items">
+         
+        </ul>
+        <p>Total: $<span id="cart-total">0.00</span></p>
+    </div>
+    </div>
+    
+    <script>
+    
+    const cart = [];
+    const cartItemsElement = document.getElementById("cart-items");
+    const cartTotalElement = document.getElementById("cart-total");
+    
+    function addToCart(productName, productPrice) {
+        const item = { name: productName, price: productPrice };
+        cart.push(item);
+        updateCartDisplay();
+    }
+    
+    function updateCartDisplay() {
+        cartItemsElement.innerHTML = "";
+        let total = 0;
+    
+        cart.forEach(item => {
+            const listItem = document.createElement("li");
+            listItem.textContent = `${item.name} - $${item.price.toFixed(2)}`;
+            cartItemsElement.appendChild(listItem);
+            total += item.price;
+        });
+    
+        cartTotalElement.textContent = total.toFixed(2);
+    }
+    </script>
+</body>
+</html>

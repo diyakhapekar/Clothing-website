@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Team - 3Some Clothing</title>
+<style>
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+ 
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fdfaf8;
+        }
+        header {
+            background-color: #1a1818;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+ 
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 10px;
+        }
+ 
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+        }
+ 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+ 
+        .team-member {
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+ 
+        .team-member-details {
+            display: none;
+            margin-top: 10px;
+            padding-left: 20px;
+            border-left: 2px solid #333;
+        }
+ 
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+</style>
+</head>
+<body>
+<header>
+<h1><img src="logo.png" height="100" width="180"> </h1>
+<nav>
+<a href="home1.html">Home</a>
+<a href="T-shirts.html">T-Shirts</a>
+<a href="shirts.html">Shirts</a>
+<a href="bottoms.html">Bottoms</a>
+<a href="about.html">About Us</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+ 
+    <div class="container">
+<h2>Our Team</h2>
+<div class="team-member" onclick="toggleDetails('patil')">
+<h3>HITESH PATIL</h3>
+<div class="team-member-details" id="patil-details">
+<p>Role: CEO</p>
+<p>Bio: Hitesh Patil has been leading the company since its inception. With his visionary leadership, 3Some Clothing has become a household name in the fashion industry.</p>
+</div>
+</div>
+<div class="team-member" onclick="toggleDetails('khapekar')">
+<h3>DIYA KHAPEKAR</h3>
+<div class="team-member-details" id="khapekar-details">
+<p>Role: Marketing Manager</p>
+<p>Bio: Diya Khapekar is a creative marketer with a passion for driving brand growth. She brings innovative ideas to our marketing campaigns.</p>
+</div>
+</div>
+<div class="team-member" onclick="toggleDetails('gautam')">
+<h3>SUSHANT SINGH GAUTAM</h3>
+<div class="team-member-details" id="gautam-details">
+<p>Role: Creative Director</p>
+<p>Bio: Sushant Singh Gautam is a talented creative director who oversees the design and artistic direction of our brand. His unique vision sets us apart in the industry.</p>
+</div>
+</div>
+</div>
+<footer>
+&copy; 2023 3Some Clothing &hearts;
+</footer>
+ 
+    <script>
+        function toggleDetails(member) {
+            var details = document.getElementById(member + "-details");
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+</script>
+</body>
+</html>
